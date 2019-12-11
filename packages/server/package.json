@@ -1,6 +1,7 @@
 {
   "name": "@express-gateway-gui/server",
   "version": "0.0.5",
+  "private": false,
   "description": "GUI server for express-gateway",
   "main": "index.js",
   "scripts": {
@@ -11,5 +12,5 @@
   "dependencies": {
     "serve": "^11.2.0"
   },
-  "gitHead": "679210e81e51db5cd1caf9e187300b37cf004b9c"
+  "gitHead": "1bc3222427bf28a70809473a3dbe3aa7b80b02be"
 }
