@@ -1,0 +1,15 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "GUI server for express-gateway",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve -s ../gui/build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giuseppe Giulio Caponetto",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^11.2.0"
+  }
+}

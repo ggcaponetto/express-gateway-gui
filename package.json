@@ -1,0 +1,14 @@
+{
+  "name": "express-gateway-gui",
+  "version": "0.0.1",
+  "description": "GUI for express-gateway",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giuseppe Giulio Caponetto",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.19.0"
+  }
+}
