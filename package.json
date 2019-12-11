@@ -11,5 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "lerna": "^3.19.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
