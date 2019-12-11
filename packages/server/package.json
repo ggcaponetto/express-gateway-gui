@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "@express-gateway-gui/server",
   "version": "0.0.1",
   "description": "GUI server for express-gateway",
   "main": "index.js",
@@ -10,5 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "serve": "^11.2.0"
-  }
+  },
+  "gitHead": "159b8faea315dcf4e7c531d79e8e50a063b97769"
 }
