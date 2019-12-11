@@ -12,5 +12,8 @@
   "dependencies": {
     "serve": "^11.2.0"
   },
-  "gitHead": "7491194e34311c7b5f265dd444d05b572204679f"
+  "gitHead": "de212a550bb3c82541d06c2ac10babbf88386031",
+  "publishConfig": {
+    "access": "public"
+  }
 }
