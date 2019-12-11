@@ -1,0 +1,12 @@
+html, body, #root{
+    height: 100%;
+}
+
+.App{
+    height: 100%;
+}
+
+:root {
+    --main-bg-transparent-80: rgba(0, 0, 0, 0.8);
+    --main-text-color: rgb(255, 255, 255);
+}

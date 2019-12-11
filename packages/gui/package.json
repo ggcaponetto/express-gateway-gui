@@ -38,5 +38,8 @@
   "gitHead": "fed35d14c7cd0c5400ee224888f9a739c9da235a",
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0"
   }
 }

@@ -1,0 +1,26 @@
+.Home {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main-bg-transparent-80);
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.Content .sidebar {
+    background: rgba(0, 0, 0, 0.80);
+}
+
+.Content .sidebar .menu .item button {
+    width: 100%;
+}
