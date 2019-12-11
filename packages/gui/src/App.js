@@ -1,9 +1,7 @@
 import React, { useReducer, useContext, useEffect } from 'react'
 import { MyRouter as Router } from './components/router/Router'
-import 'semantic-ui-css/semantic.min.css'
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./App.css"
-import "./components/semantic_override/Override.css"
 
 const defaultContext = {
   version: '0.0.1'
