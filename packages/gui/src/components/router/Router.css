@@ -8,7 +8,11 @@
 .Navbar {
     display: flex;
     flex-direction: row;
-    background-color: var(--main-bg-transparent-80);
+    background-color: var(--main-bg-transparent-100);
+}
+.Navbar .controls {
+    display: flex;
+    margin: 5px;
 }
 
 .Content {
@@ -19,8 +23,16 @@
 
 .Content .sidebar {
     background: rgba(0, 0, 0, 0.80);
+    display: flex;
+    flex-direction: column;
 }
 
+.Content .sidebar .menu .item {
+    display: flex;
+    flex: 1;
+    margin: 5px;
+}
 .Content .sidebar .menu .item button {
-    width: 100%;
+    display: flex;
+    flex: 1;
 }

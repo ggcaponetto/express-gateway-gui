@@ -54,11 +54,13 @@ export function Navbar(props) {
     }, [context]);
     return (
         <div className={fnName}>
-            <Button basic onClick={() => {
-                props.setIsVisible(!props.isVisible)
-            }}>
-                <i className="fas fa-bars"/>
-            </Button>
+            <div className={"controls"}>
+                <Button basic primary onClick={() => {
+                    props.setIsVisible(!props.isVisible)
+                }}>
+                    <i className="fas fa-bars"/>
+                </Button>
+            </div>
         </div>
     )
 }
@@ -79,10 +81,10 @@ export function Content(props) {
                 >
                     <div className={"menu"}>
                         <Menu.Item>
-                            <Button basic >Home</Button>
+                            <Button basic primary >Home</Button>
                         </Menu.Item>
                         <Menu.Item>
-                            <Button basic >Users</Button>
+                            <Button basic primary >Users</Button>
                         </Menu.Item>
                     </div>
                 </Sidebar>
