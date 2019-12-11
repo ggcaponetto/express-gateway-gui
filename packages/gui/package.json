@@ -1,6 +1,6 @@
 {
   "name": "@express-gateway-gui/gui",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
