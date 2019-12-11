@@ -1,0 +1,19 @@
+{
+  "name": "express-gateway-gui-gateway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "create": "npx eg gateway create",
+    "start": "cd test-gateway && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giuseppe Giulio Caponetto",
+  "license": "MIT",
+  "devDependencies": {
+    "express-gateway": "^1.16.10"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
