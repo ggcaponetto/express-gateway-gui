@@ -4,8 +4,7 @@
   "description": "GUI server for express-gateway",
   "main": "index.js",
   "scripts": {
-    "start": "serve -s ../gui/build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "serve -s ../gui/build"
   },
   "author": "Giuseppe Giulio Caponetto",
   "license": "MIT",
