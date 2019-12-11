@@ -1,5 +1,6 @@
 {
   "name": "express-gateway-gui",
+  "private": false,
   "version": "0.0.2",
   "description": "GUI for express-gateway",
   "main": "index.js",
