@@ -1,5 +1,5 @@
 {
-  "name": "@express-gateway-gui/server",
+  "name": "express-gateway-gui-server",
   "version": "0.0.9",
   "private": false,
   "description": "GUI server for express-gateway",
@@ -12,7 +12,7 @@
   "dependencies": {
     "serve": "^11.2.0"
   },
-  "gitHead": "de212a550bb3c82541d06c2ac10babbf88386031",
+  "gitHead": "fed35d14c7cd0c5400ee224888f9a739c9da235a",
   "publishConfig": {
     "access": "public"
   }

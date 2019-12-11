@@ -1,5 +1,5 @@
 {
-  "name": "@express-gateway-gui/gui",
+  "name": "express-gateway-gui-gui",
   "version": "0.0.9",
   "private": false,
   "dependencies": {
@@ -31,7 +31,7 @@
       "last 1 safari version"
     ]
   },
-  "gitHead": "de212a550bb3c82541d06c2ac10babbf88386031",
+  "gitHead": "fed35d14c7cd0c5400ee224888f9a739c9da235a",
   "publishConfig": {
     "access": "public"
   }
