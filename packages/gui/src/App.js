@@ -5,7 +5,8 @@ import "./App.css"
 import axios from "axios";
 
 const defaultContext = {
-  version: '0.0.1'
+  version: '0.0.1',
+  name: "express gateway"
 };
 const actions = {
   REPLACE: 'REPLACE'
@@ -22,7 +23,7 @@ const reducer = (state, action) => {
 export const Context = React.createContext(defaultContext);
 
 const config = {
-  host: "http://localhost:9876"
+  host: "http://localhost:9877"
 }
 const requests = {
   createUser: async (data, config) => {

@@ -5,6 +5,7 @@
   "description": "GUI for express-gateway",
   "main": "index.js",
   "scripts": {
+    "start": "lerna run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Giuseppe Giulio Caponetto",

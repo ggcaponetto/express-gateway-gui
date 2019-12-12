@@ -13,14 +13,14 @@ export function Users(props) {
   const [userResponse, setUserResponse] = useState(null);
   useEffect(() => {
     console.debug(`${fnName} - useEffect - context changed`, {context, props});
-  }, [context]);
-  useEffect(() => {
-    console.debug(`${fnName} - useEffect`, {context, props});
     fetchUsers()
-  }, [context.requests]);
-  const fetchUsers = () => {
-    let usersResponse = context.requests.getUsers();
-    setUserResponse(usersResponse);
+  }, [context]);
+  const fetchUsers = async () => {
+    if(context.requests){
+      let usersResponse = await context.requests.getUsers();
+      console.debug(`${fnName} - fetchUsers`, {usersResponse, context, props});
+      setUserResponse(usersResponse);
+    }
   }
   const getUserList = () => {
     try {

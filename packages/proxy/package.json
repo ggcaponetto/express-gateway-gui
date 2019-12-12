@@ -1,0 +1,16 @@
+{
+  "name": "express-gateway-gui-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env TARGET_HOST=http://localhost:9876 PROXY_PORT=9877 node src/run.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Giuseppe Giulio Caponetto",
+  "license": "MIT",
+  "dependencies": {
+    "cross-env": "^6.0.3",
+    "http-proxy": "^1.18.0"
+  }
+}

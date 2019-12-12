@@ -1,6 +1,6 @@
 import React, {useContext, useEffect} from 'react'
 import {Context} from '../../App'
-import {Button} from 'semantic-ui-react'
+import { Button, Header } from 'semantic-ui-react'
 import "./Navbar.css";
 
 export function Navbar(props) {
@@ -17,6 +17,9 @@ export function Navbar(props) {
         }}>
           <i className="fas fa-bars"/>
         </Button>
+        <Header as={"h3"} color={"teal"} style={{
+          margin: "0px", alignItems: "center", textAlign: "center", display: "flex", paddingLeft: "15px"
+        }}>{context.name}</Header>
       </div>
     </div>
   )
