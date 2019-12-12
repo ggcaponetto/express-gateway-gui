@@ -1,0 +1,9 @@
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--main-bg-transparent-100);
+}
+.Navbar .controls {
+    display: flex;
+    margin: 5px;
+}

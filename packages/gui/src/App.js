@@ -1,7 +1,8 @@
-import React, { useReducer, useContext, useEffect } from 'react'
+import React, { useReducer, useEffect } from 'react'
 import { MyRouter as Router } from './components/router/Router'
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./App.css"
+import axios from "axios";
 
 const defaultContext = {
   version: '0.0.1'
@@ -20,16 +21,42 @@ const reducer = (state, action) => {
 };
 export const Context = React.createContext(defaultContext);
 
-function App () {
+const config = {
+  host: "http://localhost:9876"
+}
+const requests = {
+  createUser: async (data, config) => {
+    const url = `${config.host}/users`
+    return await axios.post(url, data, config)
+  },
+  getUsers: async () => {
+    const url = `${config.host}/users`
+    return await axios.get(url)
+  }
+}
+
+function App (props) {
   const fnName = 'App';
   const [state, dispatch] = useReducer(reducer, defaultContext);
+  useEffect(() => {
+    console.debug(`${fnName} - useEffect`, { state });
+    // adds the dispatcher to the context so that any consumer can update the context itself
+    dispatch({
+      type: actions.REPLACE,
+      payload: {
+        actions: actions,
+        dispatch: dispatch,
+        requests
+      }
+    })
+  }, []);
   useEffect(() => {
     console.debug(`${fnName} - useEffect - state changed`, { state })
   }, [state]);
   return (
     <div className="App">
       <Context.Provider value={state}>
-        <Router/>
+        <Router {...props}/>
       </Context.Provider>
     </div>
   )
