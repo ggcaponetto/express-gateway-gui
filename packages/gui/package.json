@@ -3,6 +3,7 @@
   "version": "0.0.17",
   "private": false,
   "dependencies": {
+    "@babel/polyfill": "^7.7.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -17,7 +18,8 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",
+    "mocha": "npx mocha --require ignore-styles --require @babel/register ./test/**/*.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -39,9 +41,16 @@
     "access": "public"
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-transform-regenerator": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/register": "^7.7.4",
     "@craco/craco": "^5.6.2",
     "@fortawesome/fontawesome-free": "^5.12.0",
     "@semantic-ui-react/craco-less": "^1.1.0",
+    "ignore-styles": "^5.0.1",
+    "mocha": "^6.2.2",
     "semantic-ui-less": "^2.4.1"
   }
 }

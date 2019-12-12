@@ -5,7 +5,9 @@
   "description": "GUI for express-gateway",
   "main": "index.js",
   "scripts": {
-    "start": "lerna run start",
+    "build": "lerna run --scope express-gateway-gui-gui build",
+    "start": "lerna run --ignore express-gateway-gui-gui start",
+    "start-dev": "lerna run --ignore express-gateway-gui-server start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Giuseppe Giulio Caponetto",

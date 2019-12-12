@@ -25,7 +25,7 @@ export const Context = React.createContext(defaultContext);
 const config = {
   host: "http://localhost:9877"
 }
-const requests = {
+export const requests = {
   createUser: async (data, config) => {
     const url = `${config.host}/users`
     return await axios.post(url, data, config)

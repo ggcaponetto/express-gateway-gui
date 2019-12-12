@@ -14,4 +14,11 @@ The repository is under **active** development, at the moment this means:
 1. ``lerna bootstrap``
 
 Hack a little bit with the preview:
-1. ``cd packages/gui && npm start``
+1. ``lerna start-dev``
+
+## getting started
+
+1. ```npm i```
+1. ``lerna bootstrap``
+1. ``lerna build``
+1. ``lerna start``
