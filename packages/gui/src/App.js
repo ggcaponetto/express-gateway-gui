@@ -6,7 +6,10 @@ import axios from "axios";
 
 const defaultContext = {
   version: '0.0.1',
-  name: "express gateway"
+  name: "express gateway gui",
+  users: {
+    selected: []
+  }
 };
 const actions = {
   REPLACE: 'REPLACE'
@@ -26,9 +29,17 @@ const config = {
   host: "http://localhost:9877"
 }
 export const requests = {
-  createUser: async (data, config) => {
+  createUser: async (data) => {
     const url = `${config.host}/users`
-    return await axios.post(url, data, config)
+    return await axios.post(url, data)
+  },
+  deleteUser: async (id) => {
+    const url = `${config.host}/users/${id}`
+    return await axios.delete(url)
+  },
+  updateUser: async (id, data) => {
+    const url = `${config.host}/users/${id}`
+    return await axios.put(url)
   },
   getUsers: async () => {
     const url = `${config.host}/users`

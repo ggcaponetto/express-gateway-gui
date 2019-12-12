@@ -4,3 +4,11 @@
     flex: 1;
     height: 100%;
 }
+
+.Users .Content h1{
+    text-align: center;
+}
+.Users .Content td.selection{
+    margin: 0 auto;
+    text-align: center;
+}
