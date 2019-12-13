@@ -12,3 +12,7 @@
     margin: 0 auto;
     text-align: center;
 }
+
+.Users .Actions .tab .content{
+    max-width: 320px;
+}
