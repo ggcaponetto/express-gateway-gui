@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env TARGET_HOST=http://localhost:9876 PROXY_PORT=9877 node src/run.js",
+    "start": "node src/run.js",
+    "start-dev": "cross-env EXPRESS_GATEWAY_ADMIN_URL=http://localhost:9876 PROXY_PORT=9877 node src/run.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Giuseppe Giulio Caponetto",

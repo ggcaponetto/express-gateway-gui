@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "create": "npx eg gateway create",
-    "start": "cd test-gateway && npm start",
+    "start-dev": "cd test-gateway && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Giuseppe Giulio Caponetto",

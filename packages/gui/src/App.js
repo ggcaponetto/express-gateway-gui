@@ -9,7 +9,8 @@ const defaultContext = {
   name: "express gateway gui",
   users: {
     selected: []
-  }
+  },
+  env: JSON.stringify(process.env)
 };
 const actions = {
   REPLACE: 'REPLACE'
@@ -26,7 +27,7 @@ const reducer = (state, action) => {
 export const Context = React.createContext(defaultContext);
 
 const config = {
-  host: "http://localhost:9877"
+  host: process.env.REACT_APP_PROXY_URL
 }
 export const requests = {
   createUser: async (data) => {
