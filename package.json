@@ -5,8 +5,8 @@
   "description": "GUI for express-gateway",
   "main": "index.js",
   "scripts": {
-    "build": "lerna run --scope express-gateway-gui-gui build",
-    "start": "lerna run --ignore express-gateway-gui-gui --ignore express-gateway-gui-gateway start",
+    "build": "lerna run --scope express-gateway-gui-gui build --stream",
+    "start": "lerna run --ignore express-gateway-gui-gui --ignore express-gateway-gui-gateway start --stream",
     "start-dev": "cross-env REACT_APP_PROXY_URL=http://localhost:9877 EXPRESS_GATEWAY_ADMIN_URL=http://localhost:9876 PROXY_PORT=9877 lerna run --ignore express-gateway-gui-server start-dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
