@@ -13,5 +13,6 @@
   "dependencies": {
     "cross-env": "^6.0.3",
     "http-proxy": "^1.18.0"
-  }
+  },
+  "gitHead": "08fbee4bcc9583536fb5cc4cb7eb2fa225f79830"
 }
