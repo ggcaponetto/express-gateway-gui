@@ -8,7 +8,7 @@ The repository is under **active** development, at the moment this means:
 - No docs
 - Expect things to break
 
-## contribution: getting started
+## Contribution: Getting started
 
 1. ```npm i```
 1. ``lerna bootstrap``
@@ -16,21 +16,21 @@ The repository is under **active** development, at the moment this means:
 Hack a little bit with the preview:
 1. ``lerna start-dev``
 
-## getting started
+## Getting started
 
 1. ```npm i```
 1. ``lerna bootstrap``
 1. ``lerna build``
 1. ``lerna start``
 
-## usage with docker (baked)
+## Usage with docker (baked)
 // TODO
 
-## usage with docker (build it yourself)
+## Usage with docker (build it yourself)
 
-readable:
-1. ``docker build -t express-gateway-gui``
-1. ``docker run -e EXPRESS_GATEWAY_ADMIN_URL=http://localhost:9876 -d -p 5000:5000 -p 9877:9877 -it express-gateway-gui``
+On Windows: Use ``host.docker.internal`` to access the host.
 
-oneliner:
-1. ``docker build --build-arg REACT_APP_PROXY_URL=http://127.0.0.1:9877 -t express-gateway-gui . && docker run -e EXPRESS_GATEWAY_ADMIN_URL=http://127.0.0.1:9876 -e PROXY_PORT=9877 -d -p 5000:5000 -p 9877:9877 -it express-gateway-gui``
+1. Build the container:
+``docker build --build-arg REACT_APP_PROXY_URL=http://localhost:9877 -t express-gateway-gui . ``
+1. Run the container
+``docker run -e EXPRESS_GATEWAY_ADMIN_URL=http://host.docker.internal:9876 -e PROXY_PORT=9877 -d -p 5000:5000 -p 9877:9877 -it express-gateway-gui``
