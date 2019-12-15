@@ -3,7 +3,7 @@ import { MyRouter as Router } from "./components/router/Router";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./App.css";
 import axios from "axios";
-import * as packageJson from "./../package.json"
+import * as packageJson from "./../package.json";
 
 const defaultContext = {
   packageJson,
