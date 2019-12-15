@@ -10,7 +10,7 @@ The repository is under **active** development and the project at its earliest p
 - Expect things to break
 
 <p align="center"> 
-    <img width="300" height="400" src="./images/express-gateway-gui.png" style="transform: scale(0.65);">
+    <img style="transform: scale(0.65); height: fit-content;" width="280" src="./images/express-gateway-gui.png">
 </p>
 
 A this time the following admin sections are implemented:
