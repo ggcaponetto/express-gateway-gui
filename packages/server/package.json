@@ -1,6 +1,6 @@
 {
   "name": "express-gateway-gui-server",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "private": false,
   "description": "GUI server for express-gateway",
   "main": "index.js",
