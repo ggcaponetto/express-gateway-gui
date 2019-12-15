@@ -9,6 +9,10 @@ The repository is under **active** development and the project at its earliest p
 - Almost no docs
 - Expect things to break
 
+<p align="center"> 
+    <img src="./images/express-gateway-gui.png">
+</p>
+
 A this time the following admin sections are implemented:
 
 - [x] Users

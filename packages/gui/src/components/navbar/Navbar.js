@@ -20,7 +20,7 @@ export function Navbar (props) {
         </Button>
         <Header as={"h3"} color={"teal"} style={{
           margin: "0px", alignItems: "center", textAlign: "center", display: "flex", paddingLeft: "15px"
-        }}>{context.name}</Header>
+        }}>{context.name} v{context.packageJson.default.version}</Header>
       </div>
     </div>
   );

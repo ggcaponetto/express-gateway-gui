@@ -3,9 +3,10 @@ import { MyRouter as Router } from "./components/router/Router";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./App.css";
 import axios from "axios";
+import * as packageJson from "./../package.json"
 
 const defaultContext = {
-  version: "0.0.1",
+  packageJson,
   name: "express gateway gui",
   users: {
     selected: []

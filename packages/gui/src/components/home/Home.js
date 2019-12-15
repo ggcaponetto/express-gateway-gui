@@ -21,7 +21,6 @@ export function Home (props) {
         content={(
           <div>
             <h1>Home</h1>
-            <div>{JSON.stringify(context)}</div>
           </div>
         )}
       />

@@ -4,3 +4,6 @@
     flex: 1;
     height: 100%;
 }
+.Home .Content h1{
+    text-align: center;
+}
