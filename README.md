@@ -25,13 +25,6 @@ A this time the following admin sections are implemented:
 - [ ] API Endpoints
 - [ ] Pipeline
 
-## Getting started
-
-1. ```npm i```
-1. ``lerna bootstrap``
-1. ``lerna build``
-1. ``lerna start``
-
 ## Usage with docker (baked)
 1. Run express-gateway as usual
 1. ``docker pull ggcaponetto/express-gateway-gui``
@@ -52,10 +45,9 @@ to this address, reachable from within a docker container (On Windows: Use ``hos
 
 ``docker run -e EXPRESS_GATEWAY_ADMIN_URL=http://host.docker.internal:9876 -e PROXY_PORT=9877 -d -p 5000:5000 -p 9877:9877 -it express-gateway-gui``
 
-## Contribution
+## Contribution guide
 
 1. ```npm i```
 1. ``lerna bootstrap``
-
-Hack a little bit with the preview:
+1. ``lerna build``
 1. ``lerna start-dev``
