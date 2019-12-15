@@ -9,7 +9,10 @@
     "start": "lerna run --ignore express-gateway-gui-gui --ignore express-gateway-gui-gateway start --stream",
     "start-dev": "cross-env REACT_APP_PROXY_URL=http://localhost:9877 EXPRESS_GATEWAY_ADMIN_URL=http://localhost:9876 PROXY_PORT=9877 lerna run --ignore express-gateway-gui-server start-dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "lerna run lint-fix"
+    "prepare": "lerna run lint-fix",
+    "docker-build": "docker build --build-arg REACT_APP_PROXY_URL=http://localhost:9877 -t express-gateway-gui .",
+    "docker-tag": "docker tag express-gateway-gui ggcaponetto/express-gateway-gui:latest",
+    "docker-push": "docker push ggcaponetto/express-gateway-gui:latest"
   },
   "author": "Giuseppe Giulio Caponetto",
   "license": "MIT",
