@@ -1,16 +1,16 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { Context } from '../../App'
-import './Home.css'
-import { Navbar } from '../navbar/Navbar'
-import { Content } from '../content/Content'
+import React, { useContext, useEffect, useState } from "react";
+import { Context } from "../../App";
+import "./Home.css";
+import { Navbar } from "../navbar/Navbar";
+import { Content } from "../content/Content";
 
 export function Home (props) {
-  const fnName = 'Home'
-  const context = useContext(Context)
-  const [isVisible, setIsVisible] = useState(false)
+  const fnName = "Home";
+  const context = useContext(Context);
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    console.debug(`${fnName} - useEffect - context changed`, { context, props })
-  }, [context])
+    console.debug(`${fnName} - useEffect - context changed`, { context, props });
+  }, [context]);
   return (
     <div className={fnName}>
       <Navbar {...props} isVisible={isVisible} setIsVisible={setIsVisible}/>
@@ -26,6 +26,5 @@ export function Home (props) {
         )}
       />
     </div>
-  )
+  );
 }
-

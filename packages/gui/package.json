@@ -10,6 +10,7 @@
     "axios": "^0.19.0",
     "cross-env": "^6.0.3",
     "izitoast": "^1.4.0",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
@@ -17,11 +18,13 @@
     "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
-    "start-dev": "craco start",
+    "start-dev": "cross-env REACT_APP_PROXY_URL=http://localhost:9877 craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "mocha": "npx mocha --require ignore-styles --require @babel/register ./test/**/*.js"
+    "mocha": "npx mocha --require ignore-styles --require @babel/register ./test/**/*.js",
+    "lint": "npx eslint .",
+    "lint-fix": "npx eslint --fix ."
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,6 +54,13 @@
     "@craco/craco": "^5.6.2",
     "@fortawesome/fontawesome-free": "^5.12.0",
     "@semantic-ui-react/craco-less": "^1.1.0",
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
     "ignore-styles": "^5.0.1",
     "mocha": "^6.2.2",
     "semantic-ui-less": "^2.4.1"

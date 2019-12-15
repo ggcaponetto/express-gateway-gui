@@ -1,0 +1,18 @@
+.Todo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.Todo .Content h1{
+    text-align: center;
+}
+.Todo .Content td.selection{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Todo .Actions .tab .content{
+    max-width: 320px;
+}

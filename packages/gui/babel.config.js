@@ -14,4 +14,4 @@ module.exports = function (api) {
     presets,
     plugins
   };
-}
+};

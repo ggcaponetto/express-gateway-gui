@@ -1,8 +1,8 @@
-html, body, #root{
+html, body, #root {
     height: 100%;
 }
 
-.App{
+.App {
     height: 100%;
 }
 
@@ -10,4 +10,9 @@ html, body, #root{
     --main-bg-transparent-80: rgba(0, 0, 0, 0.8);
     --main-bg-transparent-100: rgba(0, 0, 0, 1);
     --main-text-color: rgb(255, 255, 255);
+}
+
+/*This overrides the fonts where needed. Ideally you want to bake the font into the react-semantic-ui lib.*/
+#root *:not(i) {
+    font-family: 'Roboto', sans-serif;
 }

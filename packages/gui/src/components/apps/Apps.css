@@ -1,0 +1,18 @@
+.Apps {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.Apps .Content h1{
+    text-align: center;
+}
+.Apps .Content td.selection{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Apps .Actions .tab .content{
+    max-width: 320px;
+}
