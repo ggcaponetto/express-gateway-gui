@@ -2,16 +2,16 @@
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 
+<p align="center"> 
+    <img style="transform: scale(0.65); height: fit-content;" width="280" src="./images/express-gateway-gui.png">
+</p>
+
 This is a simple GUI for [https://www.express-gateway.io/](https://www.express-gateway.io/).
 The repository is under **active** development and the project at its earliest phase, so expect:
 
 - Wild git commits
 - Almost no docs
 - Expect things to break
-
-<p align="center"> 
-    <img style="transform: scale(0.65); height: fit-content;" width="280" src="./images/express-gateway-gui.png">
-</p>
 
 A this time the following admin sections are implemented:
 
