@@ -3,7 +3,7 @@ import {Context} from "../../App";
 import "./Apps.css";
 import {Navbar} from "../navbar/Navbar";
 import {Content} from "../content/Content";
-import {Button, Table, Form, Tab, Checkbox} from "semantic-ui-react";
+import {Button, Table, Form, Tab, Checkbox, Dropdown} from "semantic-ui-react";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.css";
 
@@ -16,10 +16,23 @@ export function Apps(props) {
             apps: []
         }
     });
+    const [userResponse, setUserResponse] = useState({
+        data: {
+            users: []
+        }
+    });
     useEffect(() => {
         console.debug(`${fnName} - useEffect - context changed`, {context, props});
         fetchApps();
+        fetchUsers();
     }, [context]);
+    const fetchUsers = async () => {
+        if (context.requests) {
+            const usersResponse = await context.requests.getUsers();
+            console.debug(`${fnName} - fetchUsers`, {usersResponse, context, props});
+            setUserResponse(usersResponse);
+        }
+    };
     const fetchApps = async () => {
         if (context.requests) {
             const appsResponse = await context.requests.getApps();
@@ -64,10 +77,12 @@ export function Apps(props) {
             if (context.apps.selected.length > 0) {
                 buttons.push(
                     <Button
+                        key={"delete"}
                         color={"red"}
                         onClick={async () => {
                             await deleteSelection();
-                            fetchApps();
+                            await fetchApps();
+                            await fetchUsers();
                         }}>
                         Delete
                     </Button>
@@ -76,6 +91,7 @@ export function Apps(props) {
             if (context.apps.selected.length > 0) {
                 buttons.push(
                     <Button
+                        key={"deselect-all"}
                         color={"grey"}
                         onClick={async () => {
                             context.dispatch({
@@ -95,6 +111,7 @@ export function Apps(props) {
             if (context.apps.selected.length < appsResponse.data.apps.length) {
                 buttons.push(
                     <Button
+                        key={"select-all"}
                         color={"grey"}
                         onClick={async () => {
                             context.dispatch({
@@ -155,7 +172,27 @@ export function Apps(props) {
                     }}>
                         <Form.Field>
                             <label>userId</label>
-                            <input placeholder='userId' name={"userId"} value={form.userId} onChange={handleChange}/>
+                            <Dropdown
+                                placeholder='userId'
+                                fluid
+                                search
+                                selection
+                                value={form.userId}
+                                onChange={(event, data) => {
+                                    console.debug(`${fnName} - onChange`, {event, data});
+                                    const subForm = {};
+                                    subForm["userId"] = data.value;
+                                    setForm({
+                                        ...form,
+                                        ...subForm
+                                    });
+                                }}
+                                options={userResponse.data.users.map((user, i) => {
+                                    return {
+                                        key: i, value: user.id, text: `${user.username}`
+                                    }
+                                })}
+                            />
                         </Form.Field>
                         <Form.Field>
                             <label>name</label>
