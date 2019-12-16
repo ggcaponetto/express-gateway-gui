@@ -1,6 +1,8 @@
 # express-gateway-gui
 
 [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+[![Build Status](https://travis-ci.org/ggcaponetto/express-gateway-gui.svg?branch=master)](https://travis-ci.org/ggcaponetto/express-gateway-gui)
+
 
 <p align="center"> 
     <img style="transform: scale(0.65); height: fit-content;" width="280" src="./images/express-gateway-gui.png">
