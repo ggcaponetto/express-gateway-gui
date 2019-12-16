@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/run.js",
     "start-dev": "cross-env EXPRESS_GATEWAY_ADMIN_URL=http://127.0.0.1:9876 PROXY_PORT=9877 node src/run.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "author": "Giuseppe Giulio Caponetto",
   "license": "MIT",

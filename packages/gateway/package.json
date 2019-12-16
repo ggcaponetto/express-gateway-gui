@@ -6,7 +6,7 @@
   "scripts": {
     "create": "npx eg gateway create",
     "start-dev": "cd test-gateway && npm start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\""
   },
   "author": "Giuseppe Giulio Caponetto",
   "license": "MIT",
