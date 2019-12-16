@@ -24,7 +24,7 @@
     "eject": "craco eject",
     "mocha": "npx mocha --require ignore-styles --require @babel/register ./test/**/*.js",
     "lint": "npx eslint .",
-    "lint-fix": "npx eslint --fix ."
+    "lint-fix": "npx eslint --fix . "
   },
   "eslintConfig": {
     "extends": "react-app"

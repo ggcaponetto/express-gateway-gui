@@ -48,6 +48,6 @@ to this address, reachable from within a docker container (On Windows: Use ``hos
 ## Contribution guide
 
 1. ```npm i```
-1. ``lerna bootstrap``
-1. ``lerna build``
-1. ``lerna start-dev``
+1. ``npx lerna bootstrap``
+1. ``npx lerna run build``
+1. ``npx lerna run start-dev``
