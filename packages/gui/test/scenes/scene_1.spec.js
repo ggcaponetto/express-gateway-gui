@@ -1,13 +1,14 @@
-const requests = require("./../../../src/App.js").requests;
+const requests = require("../../src/App.js").requests;
 
 const config = {
   host: "http://localhost:9877"
 };
 
 describe("Users", function() {
-  describe("Fills the express-gateway with users.", async function() {
+  it("Fills the express-gateway with users.", async function() {
+    const allRequests = [];
     for(let i = 0; i < 5; i++){
-      await requests.createUser({
+      let request = requests.createUser({
         "username": `steve-${i}`,
         "firstname": `Com-${i}`,
         "lastname": `Truise-${i}`,
@@ -16,6 +17,8 @@ describe("Users", function() {
       }, config).catch((e) => {
         console.error("error", e);
       });
+      allRequests.push(request);
     }
+    return await Promise.all(allRequests);
   });
 });

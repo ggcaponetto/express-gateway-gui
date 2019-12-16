@@ -1,0 +1,11 @@
+language: node_js
+services:
+  - docker
+branches:
+  only:
+    - master
+before_install:
+  - npm i
+  - npx lerna bootstrap
+  - npx lerna run build
+  - docker run -e EXPRESS_GATEWAY_ADMIN_URL=http://host.docker.internal:9876 -e PROXY_PORT=9877 -d -p 5000:5000 -p 9877:9877 -it ggcaponetto/express-gateway-gui

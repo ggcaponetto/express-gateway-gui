@@ -22,7 +22,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "craco eject",
-    "mocha": "npx mocha --require ignore-styles --require @babel/register ./test/**/*.js",
+    "mocha": "npx nyc --reporter=html mocha  --color --experimental-modules --harmony --require jsdom-global/register --require ignore-styles --require @babel/register --recursive 'test/**/*.spec.js' --reporter=spec",
     "lint": "npx eslint .",
     "lint-fix": "npx eslint --fix . "
   },
@@ -62,7 +62,10 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-standard": "^4.0.1",
     "ignore-styles": "^5.0.1",
+    "jsdom": "15.2.1",
+    "jsdom-global": "3.0.2",
     "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
     "semantic-ui-less": "^2.4.1"
   }
 }
