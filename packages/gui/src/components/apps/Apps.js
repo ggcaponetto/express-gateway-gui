@@ -190,7 +190,7 @@ export function Apps(props) {
                                 options={userResponse.data.users.map((user, i) => {
                                     return {
                                         key: i, value: user.id, text: `${user.username}`
-                                    }
+                                    };
                                 })}
                             />
                         </Form.Field>
