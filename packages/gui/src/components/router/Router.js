@@ -10,6 +10,7 @@ import { Users } from "../users/Users";
 import { Home } from "../home/Home";
 import { Apps } from "../apps/Apps";
 import { Todo } from "../util/todo/Todo";
+import {Scopes} from "../scope/Scopes";
 export function MyRouter (props) {
   const fnName = "MyRouter";
   const context = useContext(Context);
@@ -22,7 +23,7 @@ export function MyRouter (props) {
       <Route exact={true} path="/users" render={(props) => <Users {...props}/>}/>
       <Route exact={true} path="/apps" render={(props) => <Apps {...props}/>}/>
       <Route exact={true} path="/credentials" render={(props) => <Todo pageName={"credentials"} {...props}/>}/>
-      <Route exact={true} path="/scopes" render={(props) => <Todo pageName={"scopes"} {...props}/>}/>
+      <Route exact={true} path="/scopes" render={(props) => <Scopes pageName={"scopes"} {...props}/>}/>
       <Route exact={true} path="/schemas" render={(props) => <Todo pageName={"schemas"} {...props}/>}/>
       <Route exact={true} path="/policies" render={(props) => <Todo pageName={"policies"} {...props}/>}/>
       <Route exact={true} path="/service-endpoints" render={(props) => <Todo pageName={"service-endpoints"} {...props}/>}/>

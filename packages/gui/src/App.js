@@ -14,6 +14,9 @@ const defaultContext = {
   apps: {
     selected: []
   },
+  scopes: {
+    selected: []
+  },
   env: JSON.stringify(process.env)
 };
 const actions = {
@@ -62,7 +65,19 @@ export const requests = {
   createApp: async (data) => {
     const url = `${config.host}/apps`;
     return await axios.post(url, data);
-  }
+  },
+  getScopes: async () => {
+    const url = `${config.host}/scopes`;
+    return await axios.get(url);
+  },
+  createScope: async (data) => {
+    const url = `${config.host}/scopes`;
+    return await axios.post(url, data);
+  },
+  deleteScope: async (scope) => {
+    const url = `${config.host}/scopes/${scope}`;
+    return await axios.delete(url);
+  },
 };
 
 function App (props) {

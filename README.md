@@ -20,7 +20,7 @@ A this time the following admin sections are implemented:
 - [x] Users
 - [x] Apps
 - [ ] Credentials
-- [ ] Scopes
+- [x] Scopes
 - [ ] Schemas
 - [ ] Policies
 - [ ] Service Endpoints

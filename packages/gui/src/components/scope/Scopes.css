@@ -1,0 +1,18 @@
+.Scopes {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+}
+
+.Scopes .Content h1{
+    text-align: center;
+}
+.Scopes .Content td.selection{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Scopes .Actions .tab .content{
+    max-width: 320px;
+}
