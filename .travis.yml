@@ -1,9 +1,13 @@
 language: node_js
+node_js:
+  - 13
 services:
   - docker
 branches:
   only:
     - master
+before_script:
+  - npm install -g npx
 before_install:
   - npm i
   - npx lerna bootstrap
