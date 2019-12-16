@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start-dev": "cross-env REACT_APP_PROXY_URL=http://localhost:9877 craco start",
-    "build": "craco build",
+    "build": "cross-env CI=false craco build",
     "test": "craco test",
     "eject": "craco eject",
     "mocha": "npx nyc --reporter=html mocha  --color --experimental-modules --harmony --require jsdom-global/register --require ignore-styles --require @babel/register --recursive 'test/**/*.spec.js' --reporter=spec",
